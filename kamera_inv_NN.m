@@ -1,6 +1,6 @@
 function [output] = kamera_inv_NN(test_y, model)
 
-h5FilePath = "model_weights" + num2str(model) +".h5";
+h5FilePath = ['model_weights', num2str(model), '.h5'];
 
 % Load the weights and biases from the HDF5 file
 weights.fc1 = h5read(h5FilePath, '/fc1.weight');
